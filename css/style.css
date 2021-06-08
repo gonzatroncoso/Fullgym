@@ -10,8 +10,7 @@ html {
   background-color: black;
   color: white;
   font-family: 'Cairo', sans-serif;
-  /* box-sizing: border-box; */
-  /* background-image: url(/img/fondo.jpg); */ }
+  /* box-sizing: border-box; */ }
 
 p {
   letter-spacing: 1px; }
@@ -120,9 +119,8 @@ p {
   .contenedor .hijo__img,
   .hijo__img .hijo__img,
   p .hijo__img {
-    width: 60%;
-    margin-left: 9rem;
-    border: solid 1px white; }
+    width: 80%;
+    margin-left: 9rem; }
   .contenedor .hijo__parrafo,
   .hijo__img .hijo__parrafo,
   p .hijo__parrafo {
@@ -138,17 +136,27 @@ p {
   margin: 0; }
 
 .carousel__centrado {
-  margin-left: 13%; }
+  margin: 0 auto; }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (max-width: 1270px) {
   .contenedor {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, auto); } }
-
-@media only screen and (min-width: 1000px) {
-  .contenedor {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, auto); } }
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, auto);
+    gap: 0px 0px; }
+    .contenedor p {
+      font-size: 2rem;
+      margin: 0;
+      padding: 0;
+      justify-content: center; }
+    .contenedor .hijo__parrafo {
+      margin: 2rem 0 2rem 0;
+      width: 100%; }
+    .contenedor .hijo__img {
+      width: 100%;
+      margin: 0; }
+    .contenedor .carousel__centrado {
+      width: 100%; } }
 
 /* Grow Shadow */
 .hvr-grow-shadow {
@@ -197,8 +205,11 @@ p {
   margin: 7rem; }
 
 .transformacion {
-  margin-top: 0;
-  border: solid 1px white; }
+  margin-top: 0; }
+
+.marco {
+  border: solid 1px white;
+  max-height: 50rem; }
 
 /* INSTALACIONES */
 #instalaciones {
@@ -302,9 +313,11 @@ input, textarea {
   background-color: black; }
 
 .tabla {
-  margin-top: 4rem;
-  margin-left: 27%;
-  font-size: 1.7rem; }
+  margin: 0 auto;
+  margin-top: 9rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60%; }
 
 th {
   background-color: #b6b6b6; }
@@ -337,6 +350,11 @@ footer {
   height: 9vh;
   width: 100%;
   margin-top: 7rem; }
+
+.footer__posicion {
+  position: fixed;
+  left: 0;
+  bottom: 0; }
 
 footer ul {
   display: flex;

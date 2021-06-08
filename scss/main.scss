@@ -7,10 +7,10 @@ $color-amarillo:yellow;
 $color-gris:#b6b6b6;
 
 
-
 /* General */
 html {
     font-size: 62.5%;
+    
 }
 
 *{
@@ -20,7 +20,6 @@ html {
     color: white; 
     font-family: 'Cairo', sans-serif;
     /* box-sizing: border-box; */
-    /* background-image: url(/img/fondo.jpg); */
 }
 p{
     letter-spacing: 1px;
@@ -86,7 +85,7 @@ header {
     text-align: right;
 }
 
-a {
+a{
     text-decoration: none;
     margin-right: 1.6rem;
 }
@@ -153,27 +152,23 @@ p {
     margin: 2rem;
     
     .hijo__img {
-        width: 60%;
-        margin-left: 9rem;
-        border: solid 1px white;    
+        width: 80%;
+        margin-left: 9rem;  
     }
-    
-    
+        
     .hijo__parrafo {
         width: 50%;
         margin-right: 9rem;
         font-size: 1.7rem;
-    }
-    
+    }    
 }
 
+
 .nuestro__equipo {
-    h2{
-        
+    h2{  
         text-align: center;
     }
 }
-
 
 
 .linea{
@@ -182,24 +177,37 @@ p {
 }
 
 .carousel__centrado{
-    margin-left: 13%;  
+    margin: 0 auto; 
 }
 
-
-@media only screen and (min-width: 700px) {
+//RESPONSIVE inicio//
+@media only screen and (max-width: 1270px) {
     .contenedor{
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, auto);
-
-    }
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(1, auto);
+        gap: 0px 0px;
+        p{
+            font-size: 2rem;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+        .hijo__parrafo{
+            margin: 2rem 0 2rem 0;
+            width: 100%;
+        }   
+        .hijo__img{
+            width: 100%;
+            margin: 0;
+        }
+        .carousel__centrado{
+            width: 100%;
+        }
+            
+}
 }
 
-@media only screen and (min-width: 1000px) {
-    .contenedor{
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, auto);
-    }
-}
 
 /* Grow Shadow */
 .hvr-grow-shadow {
@@ -257,8 +265,12 @@ p {
 }
 
 .transformacion{
-    margin-top: 0;
+    margin-top: 0;   
+}
+
+.marco{
     border: solid 1px white;
+    max-height: 50rem;
 }
 
 /* INSTALACIONES */
@@ -388,11 +400,14 @@ input, textarea{
 #horarios{
     background-color: black;
 }
-
+ 
 .tabla {
-    margin-top: 4rem;
-    margin-left: 27%;
-    font-size: 1.7rem;
+    margin: 0 auto;
+    margin-top: 9rem;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 60%;
+
 }
 
 th {
@@ -434,6 +449,13 @@ footer {
     margin-top: 7rem;
 }
 
+.footer__posicion{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+
 footer ul {
     display: flex;
     justify-content: space-between;
@@ -455,14 +477,14 @@ footer ul li p {
 }
 
 footer ul li a {
-    background-color: $color-gris;
-    
+    background-color: $color-gris;    
 }
 
 .fab {
-    margin: 1rem;
+    margin:1rem;
     background-color: $color-gris;
     color: $color-negro;
+    
 }
 
 footer ul a li{
@@ -475,8 +497,7 @@ footer ul a li{
     background-repeat: no-repeat;
     background-image: url(/img/error404.jpg);
     overflow: hidden;
-    height: 76vh;  
-       
+    height: 76vh;        
 }
 
 .boton__violeta{
@@ -489,6 +510,7 @@ footer ul a li{
     background-color: rgba(207, 18, 207, 0.753);
 
 }
+
 .footer__404{
     margin: 0;
 }
